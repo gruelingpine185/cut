@@ -15,6 +15,14 @@ After running several tests, a possible output can look like:
 
 ![Example of report output](assets/output.png)
 
+## Documentation
+
+### cutCheck(_test)
+
+`cutCheck(_test)` is a macro function that takes the result of a boolean operation *`_test`* and performs an action according to its value.
+
+- If *`_test`* evaluates to a falsy value (0, NULL, etc.), it generates an error message indicating a test failed.
+
 ## Contributing
 
 Contributions are welcomed and encouraged.
