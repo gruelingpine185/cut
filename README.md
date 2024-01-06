@@ -5,10 +5,10 @@
 
 ## Using Cut
 
-Cut is designed to be easily added to your projects. It can be included by adding the `-Iinc/cut` to your include path, and the `src/cut.c` file to your compile list. Here's an example:
+Cut is designed to be easily added to your projects. It can be included by adding the `-Icut/inc` to your include path, and the `src/cut.c` file to your compile list. Now, it can be included as `#include <cut/cut.h>`. Here's an example compilation command:
 
 ```sh
-clang -Iinc/cut src/main.c src/cut.c -o example_tests
+clang -Icut/inc src/main.c src/cut.c -o example_tests
 ```
 
 ## Contributing
