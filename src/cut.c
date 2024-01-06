@@ -1,3 +1,4 @@
+#include <stdlib.h>
 #include <stdio.h>
 #include "../inc/cut/cut.h"
 
@@ -59,4 +60,23 @@ void cut_display_report(void) {
     } else {
         printf("Failed: \x1b[31m%d\x1b[0m\n", cut_internal_report.failed);
     }
+}
+
+void cut_handle_failure(const char* _test, const char* _fname, int _ln) {
+    if(cut_ret) return;
+
+    printf("\x1b[1m%s:%d:\x1b[0m \x1b[31mTest failed:\x1b[0m\n    %s\n",
+            _fname,
+            _ln,
+            _test);
+}
+
+void cut_handle_options(void) {
+    if(cut_ret) return;
+
+    if(cut_internal_config.opts & CUT_ERROR_WITH_REPORT) {
+        cut_display_report();
+    }
+
+    if(cut_internal_config.opts & CUT_EXIT_ON_ERROR) exit(1);
 }
