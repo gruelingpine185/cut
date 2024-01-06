@@ -20,6 +20,7 @@ void cut_setup(cut_setup_fn _setup_fn,
                 cut_teardown_fn _teardown_fn,
                 cut_option _opts);
 void cut_run_test(cut_test_fn _test_fn);
+void cut_display_report(void);
 #ifdef __cplusplus
 }
 #endif // __cplusplus
