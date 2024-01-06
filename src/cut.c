@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-#include "../inc/cut/cut.h"
+#include "cut/cut.h"
 
 
 typedef struct cut_report cut_report;
