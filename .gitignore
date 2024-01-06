@@ -1,0 +1,9 @@
+# project
+a.out
+
+# bear
+compile_commands.json
+.cache/
+
+# macOS
+.DS_Store
