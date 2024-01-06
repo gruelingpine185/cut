@@ -20,6 +20,7 @@ struct cut_config {
 
 static cut_report cut_internal_report = {0};
 static cut_config cut_internal_config = {0};
+static int cut_ret = 0;
 
 
 void cut_setup(cut_setup_fn _setup_fn,
@@ -28,4 +29,16 @@ void cut_setup(cut_setup_fn _setup_fn,
     cut_internal_config.setup_fn = _setup_fn;
     cut_internal_config.teardown_fn = _teardown_fn;
     cut_internal_config.opts = _opts;
+}
+
+void cut_run_test(cut_test_fn _test_fn) {
+    if(!_test_fn) return;
+
+    if(cut_internal_config.setup_fn) cut_internal_config.setup_fn();
+
+    cut_internal_report.tests++;
+    _test_fn();
+    if(cut_internal_config.teardown_fn) cut_internal_config.teardown_fn();
+
+    if(!cut_ret) return;
 }
