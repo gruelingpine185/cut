@@ -2,6 +2,10 @@
 #define CUT_CUT_H
 
 
+#define CUT_XSTRINGIFY(_data) #_data
+#define CUT_STRINGIFY(_data) CUT_XSTRINGIFY(_data)
+
+
 typedef enum {
     CUT_DEFAULT             = 0 << 0,
     CUT_EXIT_ON_ERROR       = 1 << 0,
