@@ -12,4 +12,15 @@ typedef void (*cut_setup_fn)(void);
 typedef void (*cut_teardown_fn)(void);
 typedef void (*cut_test_fn)(void);
 
+
+#ifdef __cplusplus
+extern "C" {
+#endif // __cplusplus
+void cut_setup(cut_setup_fn _setup_fn,
+                cut_teardown_fn _teardown_fn,
+                cut_option _opts);
+#ifdef __cplusplus
+}
+#endif // __cplusplus
+
 #endif // CUT_CUT_H
