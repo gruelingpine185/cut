@@ -11,6 +11,10 @@ Cut is designed to be easily added to your projects. It can be included by addin
 clang -Icut/inc src/main.c src/cut.c -o example_tests
 ```
 
+After running several tests, a possible output can look like:
+
+![Example of report output](assets/output.png)
+
 ## Contributing
 
 Contributions are welcomed and encouraged.
