@@ -6,6 +6,12 @@
 #define CUT_STRINGIFY(_data) CUT_XSTRINGIFY(_data)
 #define CUT_ERROR_POS __FILE__, __LINE__
 
+#define cutCheck(_test)                                             \
+    do {                                                            \
+        cut_check(_test);                                           \
+        cut_handle_failure(CUT_STRINGIFY(_test), CUT_ERROR_POS);    \
+        cut_handle_options();                                       \
+    } while(0)
 
 
 typedef enum {
