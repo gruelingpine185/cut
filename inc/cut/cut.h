@@ -4,6 +4,8 @@
 
 #define CUT_XSTRINGIFY(_data) #_data
 #define CUT_STRINGIFY(_data) CUT_XSTRINGIFY(_data)
+#define CUT_ERROR_POS __FILE__, __LINE__
+
 
 
 typedef enum {
