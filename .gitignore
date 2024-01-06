@@ -5,5 +5,8 @@ a.out
 compile_commands.json
 .cache/
 
+# vscode
+.vscode/
+
 # macOS
 .DS_Store
