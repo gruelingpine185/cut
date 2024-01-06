@@ -62,6 +62,17 @@ void cut_display_report(void) {
     }
 }
 
+void cut_check(int _is_expected) {
+    if(!_is_expected) {
+        cut_internal_report.failed++;
+        cut_ret = 0;
+        return;
+    }
+
+    cut_internal_report.passed++;
+    cut_ret = 1;
+}
+
 void cut_handle_failure(const char* _test, const char* _fname, int _ln) {
     if(cut_ret) return;
 

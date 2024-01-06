@@ -21,6 +21,7 @@ void cut_setup(cut_setup_fn _setup_fn,
                 cut_option _opts);
 void cut_run_test(cut_test_fn _test_fn);
 void cut_display_report(void);
+void cut_check(int _res);
 void cut_handle_options(void);
 void cut_handle_failure(const char* _test, const char* _fname, int _ln);
 #ifdef __cplusplus
