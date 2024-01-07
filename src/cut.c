@@ -52,14 +52,15 @@ void cut_display_report(void) {
     printf("Tests Ran %d \x1b[30m|\x1b[0m ", cut_internal_report.tests);
     if(!cut_internal_report.passed) {
         printf("Passed %d \x1b[30m|\x1b[0m ", cut_internal_report.passed);
+        printf("Checks passed %d | ", cut_internal_report.passed);
     } else {
-        printf("Passed \x1b[32m%d \x1b[30m|\x1b[0m ", cut_internal_report.passed);
+        printf("Checks passed \x1b[32m%d\x1b[0m | ", cut_internal_report.passed);
     }
 
     if(!cut_internal_report.failed) {
-        printf("Failed %d\n", cut_internal_report.failed);
+        printf("Checks failed %d\n", cut_internal_report.failed);
     } else {
-        printf("Failed \x1b[31m%d\x1b[0m\n", cut_internal_report.failed);
+        printf("Checks failed \x1b[31m%d\x1b[0m\n", cut_internal_report.failed);
     }
 }
 
