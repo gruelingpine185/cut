@@ -53,7 +53,7 @@ void cut_display_report(void) {
     if(!cut_internal_report.passed) {
         printf("Passed %d \x1b[30m|\x1b[0m ", cut_internal_report.passed);
     } else {
-        printf("Passed \x1b[32m%d\x1b[0m, ", cut_internal_report.passed);
+        printf("Passed \x1b[32m%d \x1b[30m|\x1b[0m ", cut_internal_report.passed);
     }
 
     if(!cut_internal_report.failed) {
