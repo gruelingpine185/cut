@@ -49,9 +49,8 @@ void cut_run_test(cut_test_fn _test_fn) {
 void cut_display_report(void) {
     if(cut_internal_report.failed) printf("\n");
 
-    printf("Tests Ran %d \x1b[30m|\x1b[0m ", cut_internal_report.tests);
+    printf("Tests Ran %d | ", cut_internal_report.tests);
     if(!cut_internal_report.passed) {
-        printf("Passed %d \x1b[30m|\x1b[0m ", cut_internal_report.passed);
         printf("Checks passed %d | ", cut_internal_report.passed);
     } else {
         printf("Checks passed \x1b[32m%d\x1b[0m | ", cut_internal_report.passed);
